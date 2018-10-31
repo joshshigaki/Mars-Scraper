@@ -17,30 +17,53 @@
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Click Here For Mars Info and News</a></p>
     </div>
 
-    <div>
+    <h1 class="col-md-12" style="font-size:30px; font-family:Cambria;">
+      Latest Mars News
+    </h1>
+    <h2 class="col-md-12" style="font-size:20px; font-family:Cambria;">
       {{mars.recent_title}}
-    </div>
-    <div>
-      {{mars.recent_body}}
+    </h2>
+    <p class="col-md-12" style="font-size:15px; font-family:Cambria;">
+     {{mars.recent_body}}
+    </p>
 
+    <div class="col-md-12">
+      <p style="font-size:25px; font-family:Cambria;">
+        <br>
+        Featured Mars Image
+      </p>
+    <img src={{ mars.mars_pic_link }} class="col-md-8">
+    
+    <div class="col-md-4" style="border:solid; border-color:slategray;">
+      <p style="font-size:20px; font-family:Cambria;">
+        Current Weather on Mars
+      </p>
+      <p style="font-family:Cambria;">
+        {{mars.mars_weather}}
+      </p>
     </div>
-    <div>
-      {{mars.mars_pic_link}}
+    <div class="col-md-3"></div>
+    
+    <table href="{{mars.mars_facts_df|safe}}"></table>
+    <div class="row"></div>
 
+
+    <div class="container-fluid">
+      <h3>Mars Hemispheres</h3>
+      <div class="container-fluid">
+        {% for hemisphere in mars.hemisphere_image_urls %}
+        <div class="caption" style="font-family:Cambria; font-weight:bold;">
+            {{hemisphere['title']}}
+        </div>
+        <img src="{{hemisphere["img_url"]}}" style="width:400px;height:auto; float:inherit;">
+        {% endfor %}
+        </div>
+        
+      </div>
+        
+      
     </div>
-    <div>
-      {{mars.mars_weather}}
-
-    </div>
-    <div>
-      {{mars.hemisphere_image_urls}}
-
-    </div>
-    <div>
-  
-
   </div>
 </body>
 
 </html>
-
