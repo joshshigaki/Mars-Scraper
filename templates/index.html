@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hot Finds</title>
+  <title>Get Mars Information Here</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
@@ -14,15 +14,30 @@
 
     <div class="jumbotron text-center">
       <h1>Mars News</h1>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Click Here For News</a></p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Click Here For Mars Info and News</a></p>
     </div>
 
-    <!-- Craigslist Listings -->
-    <div class="row" id="craiglist-listings">
-      <div class="col-md-12">
-        <h4 class="heading">{{listings.headline}} {{listings.headline_body}}</h4>
-      </div>
+    <div>
+      {{mars.recent_title}}
     </div>
+    <div>
+      {{mars.recent_body}}
+
+    </div>
+    <div>
+      {{mars.mars_pic_link}}
+
+    </div>
+    <div>
+      {{mars.mars_weather}}
+
+    </div>
+    <div>
+      {{mars.hemisphere_image_urls}}
+
+    </div>
+    <div>
+  
 
   </div>
 </body>
